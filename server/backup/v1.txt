@@ -1,0 +1,1 @@
+the first working version with coordination message but the leader election is costly

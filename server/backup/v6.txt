@@ -1,0 +1,3 @@
+working version 6 with coordinate message aggrement and lower cost
+
+also remoeved prints and add comments
