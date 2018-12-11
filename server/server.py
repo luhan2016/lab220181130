@@ -35,6 +35,8 @@ try:
         try:
             board[entry_sequence] = element
             success = True
+            million_seconds = int(round(time.time()*1000))
+            print "\n\nmillion_seconds is {}\n\n".format(million_seconds)
         except Exception as e:
             print e
         return success
@@ -77,6 +79,8 @@ try:
         except Exception as e:
             if leaderElected == False:
                 success = contact_deadnode_neighbor(vessel_id, vessel_ip, path, payload, req='POST')
+        million_seconds = int(round(time.time()*1000))
+        print "\nfinish strict consistency million_seconds is {}\n".format(million_seconds)
         return success
 
     # when contact_verssel() can not reach the node, that means the node is dead, and we should contact the neighbor of dead node
@@ -316,7 +320,7 @@ try:
         global vessel_list, node_id, app
         global entry_sequence_index, node_num
         global election_dict, countEM, countCM, leader_id, leader_rNum, countLeader
-
+        leader_rNum = 0
         entry_sequence_index = 0
         election_dict = {0:0}
         port = 80
