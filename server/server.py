@@ -230,7 +230,7 @@ try:
         global received_election_dict, election_dict, countEM, countCM, node_num, leader_dict, leader_id, leader_rNum
         time.sleep(1)
         body = request.body.read()
-	#print "\n\n {}\n\n".format(body)
+    #print "\n\n {}\n\n".format(body)
         a, b = body.split('=')
         if int(b) > election_dict[node_id]:
             leader_dict = { int(a) : int(b)}
